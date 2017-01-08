@@ -66,6 +66,11 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
     transclude: false,
     link: function(scope, element, attrs) {
       var href = attrs['hrefInappbrowser'];
+
+      attrs.$observe('hrefInappbrowser', function(val){
+        href = val;
+      });
+      
       element.bind('click', function (event) {
 
         window.open(href, '_system', 'location=yes');

@@ -36,6 +36,22 @@ angular.module('app.routes', [])
     controller: 'menuCtrl'
   })
 
+  .state('contactUs', {
+    url: '/contactUs',
+    templateUrl: 'templates/contactUs.html',
+    controller: 'contactUsCtrl'
+  })
+
+  .state('menu.ourTeam', {
+    url: '/team',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/ourTeam.html',
+        controller: 'ourTeamCtrl'
+      }
+    }
+  })
+
 $urlRouterProvider.otherwise('/side-menu21/home')
 
   
